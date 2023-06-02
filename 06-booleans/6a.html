@@ -1,0 +1,38 @@
+<!-- Create a variable called 'hour' and save the current hour of the day
+(use 24-hour format and save it as a number between 0 and 23).
+•If hour is between 6 and 12, display 'Good morning!' in the console
+• If hour is between 13 and 17, display 'Good afternoon!' in the console
+• Otherwise, display 'Good night!' in the console -->
+
+<!-- Continuing from 6a, create a variable called 'name' and save your name inside (as a string). Update the if-statement to display your
+name in each message. For example: 'Good morning $(name!)' -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6a</title>
+</head>
+<body>
+    <h1>Hello</h1>
+
+    <script>
+        const time = new Date()
+        const hour = time.getHours()
+        const name = prompt("Enter your name")
+
+        if (hour >= 6 && hour <= 12) {
+            console.log(`Good morning ${name}!`)
+            alert(`Good morning ${name}!`)
+        } else if (hour >= 13 && hour <= 17) {
+            console.log(`Good afternoon ${name}!`)
+            alert(`Good afternoon ${name}!`)
+        } else {
+            console.log(`Good night ${name}!`)
+            alert(`Good night ${name}!`)
+        }
+    </script>
+</body>
+</html>

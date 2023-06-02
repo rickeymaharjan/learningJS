@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <button onclick="addMessage();" class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
+
+    <script>
+        const siteTitle = document.title;
+
+        let alternate = false;
+        let messageCount = 0;
+        let intervalId;
+
+        function addMessage() {
+            messageCount++;
+            alternateTitle();
+
+        }
+
+        function alternateTitle() {
+            clearInterval(intervalId);
+            intervalId = setInterval(function () {
+                if (alternate) {
+                    document.title = `(${messageCount}) Messages`;
+                } else {
+                    document.title = siteTitle;
+                }
+    
+                alternate = !alternate;
+            }, 1000);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10d</title>
+
+    <style>
+        .button {
+            background-color: rgb(240, 240, 240);
+            color: black;
+            border: none;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .button:active {
+            opacity: 0.8;
+        }
+
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <button class="js-button button">Gaming</button>
+    <button class="js-button button">Music</button>
+    <button class="js-button button">Tech</button>
+
+    <script>
+
+        const buttonElement = document.querySelectorAll('.js-button');
+        buttonElement.forEach(element => {
+            element.addEventListener('click', function () {
+                buttonElement.forEach(btn => {
+                    btn.classList.remove('is-toggled');
+                });
+
+                element.classList.add('is-toggled');
+            })
+        }); 
+
+    </script>
+</body>
+</html>

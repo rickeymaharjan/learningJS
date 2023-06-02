@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name: 'socks',
+            price: 499
+        };
+
+        console.log(product.name);
+
+        // Updating property in the object
+        product.name = 'cotton socks';
+        console.log(product.name);
+
+        // Adding new property in the object
+        product.newProperty = true;
+        console.log(product)
+
+        // Removing a property
+        delete product.newProperty;
+        console.log(product)
+
+        const product2 = {
+            name: 'basketball',
+            price: 399,
+            rating: {
+                count: 9,
+                stars: 4.5
+            },
+            fun: function greet () {
+                alert('Hello!')
+            }
+        }
+
+        console.log(product2)
+
+        // Converting JS object to JSON object 
+        console.log(JSON.stringify(product2))           // Results in a string type
+
+        // Converting JSON object to JS object
+        const jsonString = JSON.stringify(product2)
+        console.log(JSON.parse(jsonString))
+    </script>
+</body>
+</html>

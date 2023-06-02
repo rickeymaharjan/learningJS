@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9c</title>
+</head>
+<body>
+    <!-- Create 2 buttons 'heads' and 'tails', and a paragraph (<p>‹/p>) underneath. When
+    clicking the 'heads' button, display 'You chose: heads' in the paragraph. When
+    the 'tails' button, display 'You chose: tails. -->
+
+    <button onclick="
+        document.querySelector('.js-choice').innerHTML = `You chose heads.`
+    ">heads</button>
+    <button onclick="
+        document.querySelector('.js-choice').innerHTML = `You chose tails.`"
+    >tails</button>
+    <p class="js-choice"></p>
+
+</body>
+</html>

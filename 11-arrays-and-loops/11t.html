@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11t</title>
+</head>
+<body>
+    <script>
+        const list = ['egg', 'apple', 'egg', 'ham', 'egg', 'egg'];
+
+        console.log(removeEgg(list));
+
+        function removeEgg (words) {
+            words = words.reverse();
+            const newList = [];
+            let count = 0
+
+            for (let i = 0; i < words.length; i++) {
+
+                if (words[i] == 'egg' && count < 2) {
+                    count++;
+                    continue;
+                }
+
+                newList.push(words[i]);
+            }
+
+            return newList.reverse();
+        }
+    </script>
+</body>
+</html>

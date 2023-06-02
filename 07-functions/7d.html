@@ -1,0 +1,25 @@
+<!-- Create a function 'convertToFahrenheit(celsius)' that takes a number
+in degrees Celsius and returns a number in degrees Fahrenheit.
+• Formula: Fahrenheit = (Celsius * 9 / 5) + 32 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7d</title>
+</head>
+<body>
+    <script>
+        const celsius = prompt('Enter celsius')
+        const fahrenheit = convertToFarenheit(celsius)
+        alert(`Answer = ${fahrenheit}F`)
+
+        function convertToFarenheit (celsius) {
+            const fahrenheit = (celsius * 9 / 5) + 32;
+            return fahrenheit;
+        }
+    </script>
+</body>
+</html>

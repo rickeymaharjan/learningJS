@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <p>Cart Quantity</p>
+
+    <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+        updateQuantity(1)
+    ">Add to Cart</button>
+
+    <button onclick="
+        updateQuantity(2)
+    ">+2</button>
+
+    <button onclick="
+        updateQuantity(-2)
+    ">-2</button>
+
+    <button onClick="
+        updateQuantity(3)
+    ">+3</button>
+
+    <button onclick="
+        updateQuantity(-3)
+    ">-3</button>
+
+    <button onclick="
+        cartQuantity = 0;
+        alert('The cart is now empty.')
+        console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+
+    <script>
+        let cartQuantity = 0;
+        let maxQuantity = 10;
+
+        function updateQuantity (amt) {
+            if (cartQuantity + amt > 10) {
+                alert('The cart is full');
+            } else if (cartQuantity + amt < 0) {
+                alert('Not enought items in the cart')
+            } else {
+                cartQuantity += amt;
+                console.log(`Cart quantity: ${cartQuantity}`)
+            }
+        }
+    </script>
+</body>
+</html>

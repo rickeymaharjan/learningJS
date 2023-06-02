@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11c</title>
+</head>
+<body>
+    <script>
+        const myArray = [1, 2, 3, 4];
+
+        console.log(arraySwap(myArray));
+
+        function arraySwap (arr) {
+            const lastIndex = arr.length - 1;
+            let tmp = arr[lastIndex];
+            arr[lastIndex] = arr[0];
+            arr[0] = tmp;
+
+            return arr;
+        }
+    </script>
+</body>
+</html>

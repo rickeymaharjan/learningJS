@@ -1,0 +1,92 @@
+<!-- 6k. Let's say the cart has a maximum quantity of 10. Before updating the
+quantity, check if the quantity will be greater than 10: • If it will, display a popup saying 'The cart is full' and don't update
+the quantity.
+• Otherwise, update the quantity and console.log() it as usual. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+<body>
+    <p>Cart Quantity</p>
+
+    <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+
+    <button onclick="
+        if (cartQuantity < maxQuantity) {
+            cartQuantity++;
+            console.log(`Cart quantity: ${cartQuantity}`);
+        } else {
+            alert('The cart is full!');
+        }
+    ">Add to Cart</button>
+
+    <button onclick="
+        if (cartQuantity < maxQuantity) {
+            if (cartQuantity + 2 > maxQuantity) {
+                alert('Not enough space in the cart!');
+            } else {
+                cartQuantity += 2;
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
+        } else {
+            alert('The cart is full!');
+        }
+    ">+2</button>
+
+    <button onclick="
+    if (cartQuantity > 0) {
+        if (cartQuantity - 2 < 0) {
+            console.log('Not enough items in the cart!');
+        } else {
+            cartQuantity -= 2;
+            console.log(`Cart quantity: ${cartQuantity}`);
+        }
+    } else {
+        alert('The cart is empty!');
+    }
+    ">-2</button>
+
+    <button onClick="
+        if (cartQuantity < maxQuantity) {
+            if (cartQuantity + 3 > maxQuantity) {
+                alert('Not enough space in the cart!');
+            } else {
+                cartQuantity += 3;
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
+        } else {
+            alert('The cart is full!');
+        }
+    ">+3</button>
+
+    <button onclick="
+    if (cartQuantity > 0) {
+            if (cartQuantity - 3 < 0) {
+                alert('Not enough items in the cart!');
+                cartQuantity += 3;
+            } else {
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
+    } else {
+        alert('The cart is empty!');
+    }
+    ">-3</button>
+
+    <button onclick="
+        cartQuantity = 0;
+        console.log(`Cart quantity: ${cartQuantity}`);
+    ">Reset Cart</button>
+
+    <script>
+        let cartQuantity = 0;
+        let maxQuantity = 10;
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9h</title>
+</head>
+<body>
+    <!-- <input onkeyup="handleKeyUp(event)" type="text">
+    <p class="js-text"></p> -->
+
+    <input type="text" id="myInput">
+    <p id="output"></p>
+
+
+    <script>
+        // function handleKeyUp (event) {
+        //     const text = event.key;
+        //     printText(text);
+        // }
+
+        // function printText (text) {
+        //     // const text = document.querySelector('input').innerHTML;
+        //     let paraText = document.querySelector('.js-text');
+            
+        //     if (text == 'Backspace') {
+        //         paraText.innerHTML = paraText.innerHTML.slice(0, -1);
+        //     } else if (text.length == 1 ) {
+        //         paraText.innerHTML = paraText.innerHTML + text;
+        //     }
+        // }
+
+        // Get references to the input and output elements
+        let input = document.getElementById("myInput");
+        let output = document.getElementById("output");
+
+        // Attach the oninput event listener to the input element
+        input.addEventListener("input", function() {
+        // Update the text content of the output element with the input value
+        output.textContent = input.value;
+        });
+
+    </script>
+</body>
+</html>
